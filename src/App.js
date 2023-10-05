@@ -1,13 +1,17 @@
-
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Main from './pages/Main'
-import { useState } from "react";
-function App() {
-  
+import "bootstrap/dist/css/bootstrap.min.css";
+import Main from "./pages/Main";
+import Watchlist from "./components/watchlist/watchlist";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
-  return(
-    <Main/>
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/watchlist" element={<Watchlist />} />
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

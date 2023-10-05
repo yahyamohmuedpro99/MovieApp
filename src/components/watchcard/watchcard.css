@@ -1,0 +1,21 @@
+.thecard{
+    flex-direction: row;
+    align-items: center;
+}
+.theimg{
+    max-height: 15rem;
+    max-width: 15rem;
+}
+.desc{
+    font-weight: 500;
+    
+}
+.cardtitle{
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.theheart{
+    cursor: pointer;
+}

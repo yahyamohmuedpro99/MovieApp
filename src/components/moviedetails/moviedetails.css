@@ -1,0 +1,136 @@
+.details-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    margin-top: 2rem;
+}
+.details-card{
+    flex-direction: row;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.detailimg{
+    width: 60rem;
+    height: 44rem;
+}
+.detailtitle-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.detailtitle{
+    font-weight: bold;
+    font-size: 32px;
+}
+.detaildate{
+    font-size: 16px;
+    font-weight: bold;
+    color: gray;
+    margin-left: 7rem;
+    margin-top: 2rem;
+}
+.detailpop{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+    width: 80%;
+}
+.detailpop p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.detaildesc{
+    font-size: 18px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2rem;
+    text-align: justify;
+    font-weight: bold;
+}
+.tags{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 18px;
+    font-weight: bold;
+    width: 60%;
+    margin-left: 10%;
+}
+.tagitem{
+    background-color: orange;
+    padding: 5px;
+    border-radius: 5rem;
+    min-width: 8rem;
+    text-align: center;
+}
+.durandlang{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+    width: 60%;
+    margin-left: 5%;
+    font-size: 18px;
+}
+.logos{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 5%;
+    align-items: center;
+    width: 80%;
+    margin-top: 2rem;
+}
+.logo{
+    height: 6rem;
+    width: 12rem;
+}
+.towebsite{
+    margin-top: 2rem;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 8rem;
+    margin-left: 5rem;
+    cursor: pointer;
+    text-align: center;
+}
+.towebsite:hover{
+    background-color: orange;
+    border: 2px solid orange;
+}
+@media (max-width: 768px) {
+    .details-card, .detailpop, .logos, .tags, .durandlang, .detailtitle-content {
+        flex-direction: column;
+    }
+    .tagitem, .logo{
+        margin-top: 1rem;
+    }
+    .detailimg{
+        width: 21rem;
+    }
+
+}
+.recomtitle{
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 5%;
+}
+.recocards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.recocards{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+    margin-left: 5%;
+}

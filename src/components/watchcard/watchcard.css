@@ -1,0 +1,39 @@
+.thecard{
+    flex-direction: row;
+    align-items: center;
+}
+.thetitle{
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+.theimg{
+    height: 15rem;
+   width: 8rem;
+}
+.desc{
+    font-weight: 500;
+    font-size: 14px;
+    
+}
+.cardtitle{
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.theheart{
+    cursor: pointer;
+}
+.releasedate{
+    font-size: 12px;
+    color: gray;
+    margin-bottom: .5rem;
+    margin-left: 2rem;
+
+}
+.pop{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

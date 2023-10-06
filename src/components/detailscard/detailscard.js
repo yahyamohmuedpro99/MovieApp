@@ -1,9 +1,14 @@
 import "./detailscard.css";
 import Card from "react-bootstrap/Card";
 import CircularRating from "../detailscard/ratingcircle";
+import { useNavigate } from "react-router-dom";
 const Detailscard = (props) => {
+  const navigate = useNavigate();
+  const goto = () => {
+    navigate(`/moviedetails/${props.id}`);
+  };
   return (
-    <div className="thecard">
+    <div onClick={goto} className="thecard">
       <Card style={{ width: "15rem", height: "22rem" }}>
         <Card.Img
           style={{ width: "15rem", height: "15rem" }}

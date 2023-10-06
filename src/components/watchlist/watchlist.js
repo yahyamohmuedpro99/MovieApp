@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 const Watchlist = () => {
   const selector = useSelector((state) => state.thelist);
-  // const selector = [14, 35];
   const navigate = useNavigate();
   const gotohome = () => {
     navigate("/");

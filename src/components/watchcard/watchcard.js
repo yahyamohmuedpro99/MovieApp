@@ -33,7 +33,7 @@ const Watchcard = (props) => {
     dispatch(deleteItem(product.id));
   };
   return (
-    <Card className="thecard" style={{ width: "28rem" }}>
+    <Card className="thewatchcard" style={{ width: "28rem" }}>
       <Card.Img
         className="theimg"
         variant="top"

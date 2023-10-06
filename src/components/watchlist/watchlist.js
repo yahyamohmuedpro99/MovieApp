@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const Watchlist = () => {
   const selector = useSelector((state) => state.thelist);
+  // const selector = [14, 35];
   const navigate = useNavigate();
   const gotohome = () => {
     navigate("/");
@@ -19,7 +20,7 @@ const Watchlist = () => {
         <div className="nomovies">
           <p>No Movies In your Watch List!</p>
           <Button onClick={gotohome} variant="warning">
-            Warning
+            Go to Home
           </Button>
         </div>
       ) : (

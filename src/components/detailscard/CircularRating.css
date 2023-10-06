@@ -1,0 +1,37 @@
+.circular-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .circle-svg {
+    width: 100px;
+    height: 100px;
+    
+  }
+  
+  .circle-bg {
+    fill: transparent;
+    stroke: #ddd; 
+    stroke-width: 5;
+  }
+  
+  .circle-progress {
+    fill: transparent;
+    stroke: green; 
+    stroke-width: 5;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.5s ease;
+  }
+  
+  .rating-value {
+    margin-top: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    font-weight: bold;
+  }
+  

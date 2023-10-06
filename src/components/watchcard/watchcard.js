@@ -18,7 +18,6 @@ const Watchcard = (props) => {
         `https://api.themoviedb.org/3/movie/${props.id}?api_key=33b2284e92b97df923005c1736559da1`
       )
       .then((response) => {
-        console.log(response.data);
         setProduct(response.data);
       })
       .catch((error) => {
@@ -38,7 +37,7 @@ const Watchcard = (props) => {
       <Card.Img
         className="theimg"
         variant="top"
-        src={`https://image.tmdb.org/t/p/w500/${product.backdrop_path}`}
+        src={`https://image.tmdb.org/t/p/w500/${product.poster_path}`}
       />
       <Card.Body>
         <div className="cardtitle">

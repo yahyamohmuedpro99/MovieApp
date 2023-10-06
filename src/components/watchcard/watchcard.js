@@ -1,17 +1,17 @@
 import "./watchcard.css";
 import Card from "react-bootstrap/Card";
-// import { Rating } from "react-simple-star-rating";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
-
+import { Rating } from "react-simple-star-rating";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeartCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { deleteItem } from "../../redux/thelist";
+import { useNavigate } from "react-router-dom";
 
 const Watchcard = (props) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
@@ -31,11 +31,15 @@ const Watchcard = (props) => {
     return null;
   }
 
-  const deletemovie = () => {
+  const handleDelete = () => {
     dispatch(deleteItem(product.id));
   };
+
+  const gotocarddetails = () => {
+    navigate(`/moviedetails/${props.id}`);
+  };
   return (
-    <Card className="thewatchcard" style={{ width: "28rem" }}>
+    <Card className="thewatchcard" style={{ width: "100%" }}>
       <Card.Img
         className="theimg"
         variant="top"
@@ -43,31 +47,28 @@ const Watchcard = (props) => {
       />
       <Card.Body>
         <div className="cardtitle">
-          <Card.Title className="thetitle">{product.original_title}</Card.Title>
-
-          <AiFillHeart
+          <Card.Title
+            onClick={gotocarddetails}
+            style={{ cursor: "pointer" }}
+            className="thetitle"
+          >
+            {product.original_title}
+          </Card.Title>
+          <FontAwesomeIcon
             className="theheart"
-            size="2xl"
-            style={{ color: "#ec2604" }}
-            onClick={deletemovie}
+            size="2x"
+            style={{ color: "black" }}
+            onClick={handleDelete}
+            icon={faHeartCircleXmark}
           />
         </div>
         <p className="releasedate">{product.release_date}</p>
         <div className="pop">
-          <div
-            style={{
-              direction: "ltr",
-              fontFamily: "sans-serif",
-              touchAction: "none",
-              marginBottom: "1rem",
-              fontSize: "20px",
-              maxHeight: "2rem",
-            }}
-          >
-            <AiFillHeart
+          <div className="rating">
+            <Rating
               allowFraction
               initialValue={Number(product.vote_average).toFixed(2) * 0.5}
-              onClick={function noRefCheck() {}}
+              onClick={() => {}}
               readonly
             />
           </div>

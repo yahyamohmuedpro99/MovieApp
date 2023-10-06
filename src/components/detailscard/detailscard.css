@@ -23,7 +23,7 @@
 .ratingcirc{
 position: absolute;
 z-index: 1;
-top: 12rem;
-right: 0;
+bottom: 13rem;
+right: 5rem;
 }
   

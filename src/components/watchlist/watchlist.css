@@ -1,4 +1,5 @@
-.watchlist-content{
+
+.watchlist-content {
     font-weight: bold;
     display: flex;
     flex-direction: column;
@@ -6,15 +7,18 @@
     width: 90%;
     margin-left: 5%;
     min-height: 50rem;
-}
-.listitems{
+    margin-top: 2rem;
+  }
+  
+  .listitems {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 2rem;
-    row-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 3rem;
     margin-top: 3rem;
-}
-.nomovies{
+  }
+  
+  .nomovies {
     width: 100%;
     height: 100%;
     display: flex;
@@ -22,16 +26,52 @@
     align-items: center;
     justify-content: space-around;
     margin-top: 5rem;
-    
-}
-.nomovies p{
+  }
+  
+  .nomovies p {
     font-weight: bold;
     font-size: 22px;
-}
-.nomovies button{
+  }
+  
+  .nomovies button {
     font-weight: bold;
     font-size: 22px;
     padding: 3px;
     width: 60%;
     margin-top: 5rem;
-}
+  }
+  .resetbtn{
+    width: 20rem;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media (max-width: 1048px) {
+    .listitems {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+      }
+  }
+
+  @media (max-width: 768px) {
+    .listitems {
+      grid-template-columns: repeat(1, 1fr);
+      column-gap: 1rem;
+    }
+  
+    .nomovies {
+      margin-top: 3rem;
+    }
+  
+    .nomovies p {
+      font-size: 18px;
+    }
+  
+    .nomovies button {
+      font-size: 18px;
+      margin-top: 3rem;
+    }
+  }
+  

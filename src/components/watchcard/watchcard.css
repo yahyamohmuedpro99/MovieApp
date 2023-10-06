@@ -1,39 +1,65 @@
-.thewatchcard{
-    flex-direction: row;
-    align-items: center;
-}
-.thetitle{
-    font-size: 22px;
-    font-weight: bold;
-    margin: 0;
-}
-.theimg{
-    height: 15rem;
-   width: 8rem;
-}
-.desc{
-    font-weight: 500;
-    font-size: 14px;
-    
-}
-.cardtitle{
+
+.thewatchcard {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .thetitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .theimg {
+    width: 100%;
+    max-height: 15rem;
+    object-fit: cover;
+  }
+  
+  .desc {
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: justify;
+  }
+  
+  .cardtitle {
+    display: flex;
+    justify-content: space-between;
     font-weight: bold;
     margin-bottom: 1rem;
-}
-.theheart{
+  }
+  
+  .theheart {
     cursor: pointer;
-}
-.releasedate{
-    font-size: 12px;
+  }
+  
+  .releasedate {
+    font-size: 0.8rem;
     color: gray;
-    margin-bottom: .5rem;
-    margin-left: 2rem;
-
-}
-.pop{
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  
+  .pop {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-}
+  }
+  
+  @media (max-width: 768px) {
+    .thewatchcard {
+      flex-direction: column;
+    }
+  
+    .theimg {
+      width: 100%;
+      max-height: auto;
+    }
+  
+    .releasedate {
+      margin-left: 0;
+    }
+  }
+  

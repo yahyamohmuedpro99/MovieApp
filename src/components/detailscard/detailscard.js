@@ -4,7 +4,7 @@ import CircularRating from "../detailscard/ratingcircle";
 const Detailscard = (props) => {
   return (
     <div className="thecard">
-      <Card style={{ width: "15rem", height: "22rem" }}>
+      <Card >
         <Card.Img
           style={{ width: "15rem", height: "15rem" }}
           variant="top"

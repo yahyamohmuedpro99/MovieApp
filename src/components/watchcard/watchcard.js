@@ -1,8 +1,10 @@
 import "./watchcard.css";
 import Card from "react-bootstrap/Card";
-import { Rating } from "react-simple-star-rating";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+// import { Rating } from "react-simple-star-rating";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+
 import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -43,9 +45,8 @@ const Watchcard = (props) => {
         <div className="cardtitle">
           <Card.Title className="thetitle">{product.original_title}</Card.Title>
 
-          <FontAwesomeIcon
+          <AiFillHeart
             className="theheart"
-            icon={faHeart}
             size="2xl"
             style={{ color: "#ec2604" }}
             onClick={deletemovie}
@@ -63,7 +64,7 @@ const Watchcard = (props) => {
               maxHeight: "2rem",
             }}
           >
-            <Rating
+            <AiFillHeart
               allowFraction
               initialValue={Number(product.vote_average).toFixed(2) * 0.5}
               onClick={function noRefCheck() {}}

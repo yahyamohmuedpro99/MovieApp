@@ -1,6 +1,13 @@
+import { useEffect } from 'react'
 import {AiOutlineHeart,AiFillHeart} from 'react-icons/ai'
+import { useParams } from 'react-router-dom'
 
 export default function Watched(){
+    const parms=useParams()
+    //=========> redux data that user store (watched list)////////********** */
+    
+    
+
     return(
     <>
         <h2 >watched list</h2>

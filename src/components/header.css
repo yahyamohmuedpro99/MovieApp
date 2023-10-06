@@ -1,0 +1,15 @@
+.header{
+    background-color:#FFE353;
+}
+a{
+    color:black;
+    font-weight: bold;
+}
+.watchedicon{
+    display:flex;
+    align-items: center;
+    font-size:x-large;
+}
+.hero{
+    background-color: #F3F1F1;
+}

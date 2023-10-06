@@ -2,6 +2,7 @@ import "./detailscard.css";
 import Card from "react-bootstrap/Card";
 import CircularRating from "../detailscard/ratingcircle";
 const Detailscard = (props) => {
+  
   return (
     <div className="thecard">
       <Card >

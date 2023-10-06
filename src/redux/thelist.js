@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const thelist = createSlice({
   name: "thelist",
-  initialState: [],
+  initialState: [14, 35],
   reducers: {
     addItem: (state, action) => {
       return [...state, action.payload];

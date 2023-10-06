@@ -7,10 +7,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import Detailscard from "../detailscard/detailscard";
-
+import { addItem } from "../../redux/thelist";
+import { useDispatch } from "react-redux";
 const Moviedetails = () => {
   const [movie, setMovie] = useState({});
   const [reco, setReco] = useState([]);
+  const dispatch = useDispatch();
   const param = useParams();
   useEffect(() => {
     axios
@@ -55,6 +57,9 @@ const Moviedetails = () => {
               icon={faHeart}
               size="2xl"
               style={{ color: "#ec2604" }}
+              onClick={() => {
+                dispatch(addItem(movie.id));
+              }}
             />
           </div>
           <p className="detaildate">{movie.release_date}</p>
@@ -136,6 +141,7 @@ const Moviedetails = () => {
                 title={item.original_title}
                 date={item.release_date}
                 popularity={(item.popularity * 0.05).toFixed(1)}
+                id={item.id}
               />
             ))
           : null}

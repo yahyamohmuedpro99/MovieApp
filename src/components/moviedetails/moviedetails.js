@@ -7,8 +7,8 @@ import { Rating } from "react-simple-star-rating";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-import Detailscard from "../detailscard/detailscard";
 import { addItem } from "../../redux/thelist";
+import MovieCard from '../movieCard.js'
 
 const Moviedetails = () => {
   const [movie, setMovie] = useState({});
@@ -131,17 +131,10 @@ const Moviedetails = () => {
         </Card.Body>
       </Card>
       <h1 className="recomtitle">Recommendations</h1>
-      <div className="recocards">
+      <div className="row d-flex justify-content-center ">
         {reco.length !== 0
-          ? reco.map((item) => (
-              <Detailscard
-                img={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-                title={item.original_title}
-                date={item.release_date}
-                popularity={(item.vote_average * 10).toFixed(1)}
-                id={item.id}
-                key={item.id}
-              />
+          ? reco.map((item,i) => (
+              <MovieCard movie={item} key={1}/>
             ))
           : null}
       </div>

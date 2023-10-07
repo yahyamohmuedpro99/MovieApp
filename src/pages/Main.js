@@ -12,12 +12,20 @@ const key = "396e1f3a801a3992cc2ce865047a5109";
 function Main() {
   const [movies, setMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
+  //try to except most of bad nudity on the genre ids 
+  const genreIdsToInclude = [27, 28, 80,12]; 
 
-  function filterAdult(movies) {
-    setMovies(movies.filter((movie) => movie.adult !== true));
+  function filterByGenre(movies) {
+    setMovies(
+      movies.filter((movie) =>
+        genreIdsToInclude.some((genreId) => movie.genre_ids.includes(genreId))
+      )
+    );
   }
+  
+  
   function updateQuery(movies) {
-    filterAdult(movies);
+    filterByGenre(movies);
   }
   function handlePage(current) {
     setCurrentPage(current);
@@ -29,7 +37,7 @@ function Main() {
       )
       .then((response) => {
         console.log(response.data.results);
-        filterAdult(response.data.results);
+        filterByGenre(response.data.results);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -47,7 +55,7 @@ function Main() {
 
       <Paginat
         currentPage={currentPage}
-        totalPages={5}
+        totalPages={10}
         onPageChange={(newPage) => setCurrentPage(newPage)}
       />
     </>
@@ -61,7 +69,7 @@ function Paginat({ currentPage, totalPages, onPageChange }) {
   );
 
   return (
-    <div className="pagination">
+    <div className="pagination d-flex justify-content-center">
       {pageNumbers.map((pageNumber) => (
         <Pagination.Item
           key={pageNumber}

@@ -17,11 +17,16 @@ export default function Search({ newMovies,instead }) {
       .catch((error) => console.error(error));
   }, [query]);
   return (
-    <div className="col-9 p-2 m-2 text-center">
+    <div className="col-12 p-2 m-2 text-center">
       <input
         className="d-inline border border-none w-100"
+        style={{
+          padding:'5px',
+          borderRadius:'19px'
+
+        }}
         type="text"
-        placeholder="Search movies..."
+        placeholder="  Search movies..."
         value={query}
         onChange={(e) => {
           setQuery(e.target.value);

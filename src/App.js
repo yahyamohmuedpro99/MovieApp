@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
           <Header/>
           <div className="">
-            <Router/>
+        <Router/>
           </div>
     </BrowserRouter>
   );

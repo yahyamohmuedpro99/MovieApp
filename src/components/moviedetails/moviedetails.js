@@ -140,7 +140,7 @@ const Moviedetails = () => {
                 img={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
                 title={item.original_title}
                 date={item.release_date}
-                popularity={(item.popularity * 0.05).toFixed(1)}
+                popularity={(item.vote_average * 10).toFixed(1)}
                 id={item.id}
               />
             ))

@@ -20,10 +20,13 @@
     position: relative;
     cursor: pointer;
   }
-.ratingcirc{
+.progressbar{
 position: absolute;
 z-index: 1;
-bottom: 13rem;
-right: 5rem;
+bottom: 8.4rem;
+right: -5.85rem;
+height: 3rem;
+font-weight: bold;
+
 }
   

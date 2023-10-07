@@ -13,7 +13,7 @@ export default function MovieCard({ movie, isFavorite }) {
       dispatch(deleteItem(movie.id));
     } else {
       // If the movie is not a favorite, add it to the list
-      dispatch(addItem(movie.id));
+      dispatch(addItem(movie.id)); 
     }
   };
 
@@ -23,7 +23,7 @@ export default function MovieCard({ movie, isFavorite }) {
     <img
       className="card-img-top"
       src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-      alt="Card image cap"
+      alt="card"
     />
      <div style={{
     width: '40px',

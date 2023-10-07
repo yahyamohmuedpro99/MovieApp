@@ -16,7 +16,7 @@ export default function PopularMoviesList({ movies }) {
       <h2>Popular Movies</h2>
       <div className="row d-flex justify-content-center ">
         {movies.map((movie, i) => (
-          <MovieCard movie={movie} />
+          <MovieCard movie={movie} key={i} />
         ))}
       </div>
     </div>

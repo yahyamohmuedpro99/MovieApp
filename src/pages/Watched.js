@@ -1,5 +1,4 @@
-import { useEffect } from 'react'
-import {AiOutlineHeart,AiFillHeart} from 'react-icons/ai'
+import {AiFillHeart} from 'react-icons/ai'
 import { useParams } from 'react-router-dom'
 
 export default function Watched(){

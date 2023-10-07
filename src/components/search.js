@@ -12,10 +12,11 @@ export default function Search({ newMovies,instead }) {
       )
       .then((res) => {
         console.log(res.data.results)
-        query?newMovies(res.data.results):instead(1);
+        query ? newMovies(res.data.results) : instead(1);
       })
       .catch((error) => console.error(error));
-  }, [query]);
+  }, [query, newMovies, instead]);
+  
   return (
     <div className="col-12 p-2 m-2 text-center">
       <input

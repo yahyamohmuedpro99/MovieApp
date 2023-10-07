@@ -3,6 +3,7 @@ export default function Loading() {
     <>
       <img
         src='https://motiongraphicsphoebe.files.wordpress.com/2018/10/giphy.gif'
+        alt="lazy one"
         style={{
           position: 'absolute',
           top: '50%',

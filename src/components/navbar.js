@@ -2,16 +2,11 @@ import {
   Navbar,
   NavbarBrand,
   Dropdown,
-  NavItem,
-  PageItem,
-  Pagination,
-  PaginationItem,
-  NavLink,
+
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import "./header.css";
-import { UseSelector } from "react-redux/es/hooks/useSelector";
 import { useSelector } from "react-redux";
 export default function Header() {
   return (

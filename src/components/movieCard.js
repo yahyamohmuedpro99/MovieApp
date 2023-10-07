@@ -2,7 +2,6 @@ import React from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { addItem, deleteItem } from "../redux/thelist";
-import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 export default function MovieCard({ movie, isFavorite }) {
